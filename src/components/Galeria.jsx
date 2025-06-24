@@ -9,63 +9,63 @@ const galleryItems = [
     id: 1,
     title: "Arte Creativo 1",
     description: "Trabajo artístico realizado con nuestros materiales de arte y papelería.",
-    image: "/src/assets/images/galeria-arte1.jpg",
+    image: "/img/galeria-arte1.jpg",
     category: "Arte"
   },
   {
     id: 2,
     title: "Proyecto Escolar",
     description: "Hermoso proyecto escolar utilizando cartulinas y marcadores de colores.",
-    image: "/src/assets/images/galeria-arte2.webp",
+    image: "/img/galeria-arte2.webp",
     category: "Escolar"
   },
   {
     id: 3,
     title: "Arte Expresivo",
     description: "Expresión artística con técnicas mixtas y materiales variados.",
-    image: "/src/assets/images/galeria-arte3.webp",
+    image: "/img/galeria-arte3.webp",
     category: "Arte"
   },
   {
     id: 4,
     title: "Trabajo Manual",
     description: "Creación manual con elementos de librería y arte.",
-    image: "/src/assets/images/galeria-arte4.webp",
+    image: "/img/galeria-arte4.webp",
     category: "Manualidades"
   },
   {
     id: 5,
     title: "Diseño Original",
     description: "Diseño original realizado con nuestros productos de calidad.",
-    image: "/src/assets/images/galeria-arte5.webp",
+    image: "/img/galeria-arte5.webp",
     category: "Diseño"
   },
   {
     id: 6,
     title: "Arte Estudiantil",
     description: "Trabajo estudiantil que demuestra creatividad y técnica.",
-    image: "/src/assets/images/galeria-arte6.webp",
+    image: "/img/galeria-arte6.webp",
     category: "Escolar"
   },
   {
     id: 7,
     title: "Proyecto Creativo",
     description: "Proyecto que combina arte y funcionalidad.",
-    image: "/src/assets/images/galeria-arte7.webp",
+    image: "/img/galeria-arte7.webp",
     category: "Arte"
   },
   {
     id: 8,
     title: "Expresión Artística",
     description: "Una muestra de expresión artística con materiales diversos.",
-    image: "/src/assets/images/galeria-arte8.jpeg",
+    image: "/img/galeria-arte8.jpeg",
     category: "Arte"
   },
   {
     id: 9,
     title: "Obra Final",
     description: "Obra final que representa el talento de nuestros clientes.",
-    image: "/src/assets/images/galeria-arte9.jpeg",
+    image: "/img/galeria-arte9.jpeg",
     category: "Diseño"
   }
 ];
