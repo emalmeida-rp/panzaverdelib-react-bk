@@ -44,7 +44,7 @@ const ProductsPage = () => {
           </div>
           {/* Filtros de categoría */}
           <div className={styles.categoryFilterBar}>
-            <button className={`${styles.categoryFilterBtn} ${!categoryId ? 'active' : ''}`} onClick={() => navigate('/productos')}>
+            <button className={`${styles.categoryFilterBtn} ${!categoryId ? 'active' : ''}`} onClick={() => navigate('/products')}>
               Todos
             </button>
             {categories.map(cat => (

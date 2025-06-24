@@ -55,7 +55,7 @@ const Navbar = () => {
               </button>
               <ul className={`dropdown-menu${showProductsDropdown ? ' show' : ''}`} style={{ minWidth: 180 }}>
                 <li>
-                  <button className="dropdown-item" onClick={() => handleCategoryClick('/productos')}>
+                  <button className="dropdown-item" onClick={() => handleCategoryClick('/products')}>
                     <i className="bi bi-grid-3x3-gap me-2"></i>
                     Todos
                   </button>
@@ -105,6 +105,10 @@ const Navbar = () => {
             
             <Link to="/contact" className="nav-link" onClick={() => setIsNavCollapsed(true)}>
               Contacto
+            </Link>
+            <Link to="/tracking" className="nav-link" onClick={() => setIsNavCollapsed(true)}>
+              <i className="bi bi-search me-1"></i>
+              Seguimiento
             </Link>
             <Link to="/cart" className="nav-link position-relative" onClick={() => setIsNavCollapsed(true)}>
               <i className="bi bi-cart"></i>

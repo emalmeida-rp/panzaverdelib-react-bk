@@ -84,6 +84,7 @@ const CheckoutForm = () => {
         ...formData,
         items: cart.map(item => ({
           product: item.id,
+          productName: item.name,
           quantity: item.quantity,
           price: item.price
         })),
@@ -133,7 +134,7 @@ const CheckoutForm = () => {
           <p>Agrega algunos productos antes de proceder al checkout.</p>
           <button 
             className="btn btn-primary"
-            onClick={() => navigate('/productos')}
+            onClick={() => navigate('/products')}
           >
             Ver productos
           </button>

@@ -15,7 +15,7 @@ const Cart = () => {
           <p className="text-muted mb-4">¡Agrega algunos productos para comenzar tu compra!</p>
           <button 
             className="btn btn-primary btn-lg"
-            onClick={() => navigate('/productos')}
+            onClick={() => navigate('/products')}
           >
             <i className="bi bi-shop me-2"></i>
             Ver productos
@@ -105,7 +105,7 @@ const Cart = () => {
                 
                 <button 
                   className="btn btn-outline-secondary"
-                  onClick={() => navigate('/productos')}
+                  onClick={() => navigate('/products')}
                 >
                   <i className="bi bi-arrow-left me-2"></i>
                   Seguir comprando

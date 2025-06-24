@@ -148,7 +148,8 @@ const CartWidget = () => {
         const orderData = {
           ...formValues,
           items: cart.map(item => ({
-            product: item._id,
+            product: item.id,
+            productName: item.name,
             quantity: item.quantity,
             price: item.price
           })),
@@ -176,7 +177,7 @@ const CartWidget = () => {
             title: '¡Pedido realizado!',
             html: `<p>Tu código de pedido es: <b>${data.code}</b></p>
                    <h4>Resumen:</h4>
-                   <ul style="text-align:left;">${orderData.items.map(item => `<li>${item.quantity} x ${cart.find(p => p._id === item.product)?.name || 'Producto'}</li>`).join('')}</ul>
+                   <ul style="text-align:left;">${orderData.items.map(item => `<li>${item.quantity} x ${item.productName}</li>`).join('')}</ul>
                    <p><b>Total: $${orderData.total}</b></p>
                    <p style='font-size: 0.95em; text-align: center;'>
                      ALIAS MP: Panzaverde.lib
@@ -308,7 +309,7 @@ const CartWidget = () => {
                       <div className="d-flex align-items-center">
                         <button 
                           className="btn btn-sm btn-outline-secondary me-1" 
-                          onClick={e => { e.stopPropagation(); updateQuantity(item._id, item.quantity - 1, item.stock); }} 
+                          onClick={e => { e.stopPropagation(); updateQuantity(item.id, item.quantity - 1, item.stock); }} 
                           disabled={item.quantity === 1}
                         >
                           -
@@ -316,7 +317,7 @@ const CartWidget = () => {
                         <span>{item.quantity}</span>
                         <button 
                           className="btn btn-sm btn-outline-secondary ms-1" 
-                          onClick={e => { e.stopPropagation(); updateQuantity(item._id, item.quantity + 1, item.stock); }}
+                          onClick={e => { e.stopPropagation(); updateQuantity(item.id, item.quantity + 1, item.stock); }}
                           disabled={item.quantity >= item.stock}
                         >
                           +
@@ -338,7 +339,7 @@ const CartWidget = () => {
                         reverseButtons: true
                       });
                       if (result.isConfirmed) {
-                        removeFromCart(item._id);
+                        removeFromCart(item.id);
                         showAlert(`"${item.name}" eliminado`, 'info');
                       }
                     }}>

@@ -132,7 +132,12 @@ const OrderConfirmation = () => {
                         {order.items.map((item, index) => (
                           <tr key={index}>
                             <td>{item.quantity}x</td>
-                            <td>{item.product?.name || 'Producto'}</td>
+                            <td>
+                              {item.productName || item.product}
+                              {!item.productName && (
+                                <small className="text-muted d-block">ID: {item.product}</small>
+                              )}
+                            </td>
                             <td className="text-end">${(item.price * item.quantity).toFixed(2)}</td>
                           </tr>
                         ))}
@@ -174,7 +179,7 @@ const OrderConfirmation = () => {
                 <div className="d-grid gap-2 d-md-flex justify-content-md-center">
                   <button 
                     className="btn btn-success me-md-2"
-                    onClick={() => navigate('/productos')}
+                    onClick={() => navigate('/products')}
                   >
                     <i className="bi bi-shop me-2"></i>
                     Seguir comprando
