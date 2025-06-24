@@ -3,7 +3,7 @@
 Una aplicación web moderna de e-commerce para la Librería Panza Verde, desarrollada con React, Vite, Firebase y Bootstrap.
 
 
-[!alt](/public/home.png)
+![alt](/public/home.png)
 
 ## 🚀 Características Principales
 
@@ -29,7 +29,7 @@ Asegúrate de tener instalado:
 ### 1. Clonar el Repositorio
 
 ```bash
-git clone <https://github.com/emalmeida-rp/panzaverdelib-react-bk.git>
+git clone https://github.com/emalmeida-rp/panzaverdelib-react-bk.git
 cd panzaverdelib-react-bk-master
 ```
 
