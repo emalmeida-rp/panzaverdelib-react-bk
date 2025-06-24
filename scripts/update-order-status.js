@@ -10,16 +10,40 @@ import {
   doc,
   serverTimestamp 
 } from 'firebase/firestore';
+import dotenv from 'dotenv';
 
-// Firebase configuration
+// Cargar variables de entorno
+dotenv.config();
+
+// Firebase configuration usando variables de entorno
 const firebaseConfig = {
-  apiKey: "AIzaSyDqg6BqSa7kLo8l3Rk7Jt9Bx8CeP0wT4aQ",
-  authDomain: "panzaverde-libreria.firebaseapp.com",
-  projectId: "panzaverde-libreria",
-  storageBucket: "panzaverde-libreria.appspot.com",
-  messagingSenderId: "123456789012",
-  appId: "1:123456789012:web:abc123def456ghi789"
+  apiKey: process.env.VITE_FIREBASE_API_KEY,
+  authDomain: process.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.VITE_FIREBASE_APP_ID
 };
+
+// Verificar que las variables estén definidas
+const requiredEnvVars = [
+  'VITE_FIREBASE_API_KEY',
+  'VITE_FIREBASE_AUTH_DOMAIN', 
+  'VITE_FIREBASE_PROJECT_ID',
+  'VITE_FIREBASE_STORAGE_BUCKET',
+  'VITE_FIREBASE_MESSAGING_SENDER_ID',
+  'VITE_FIREBASE_APP_ID'
+];
+
+for (const envVar of requiredEnvVars) {
+  if (!process.env[envVar]) {
+    console.error(`❌ Error: Variable de entorno ${envVar} no está definida`);
+    console.error('Por favor, crea un archivo .env con todas las variables de Firebase');
+    process.exit(1);
+  }
+}
+
+console.log('✅ Variables de entorno cargadas correctamente');
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
